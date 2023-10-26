@@ -1,0 +1,9 @@
+.menuCard{
+    position: relative;
+    top: 15%;
+    background-color: white;
+    border-radius: 12px;
+    height: fit-content;
+    padding: 15px;
+    width: 65vw;
+}

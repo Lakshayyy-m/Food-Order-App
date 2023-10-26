@@ -1,0 +1,14 @@
+.main{
+    position: fixed;
+    z-index: 100;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background-color: rgb(18, 67, 189);
+    display: flex;
+    justify-content: space-around;
+    gap: 45%;
+    color: white;
+    padding: 10px;
+    align-items: center;
+}

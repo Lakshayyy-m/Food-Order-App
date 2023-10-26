@@ -1,0 +1,29 @@
+.introduction {
+  position: relative;
+  /* top: -60px; */
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-direction: column;
+  color: white;
+  background-color: rgb(36, 32, 32);
+  padding: 35px;
+  padding-bottom: 50px;
+  border-radius: 10px;
+  transform: scale(0.9);
+  margin-top: 500px;
+  min-width: 250px;
+}
+
+.introduction p {
+  text-align: center;
+  font-size: smaller;
+}
+
+@media (max-width: 580px) {
+  .introduction {
+    top: 121px;
+  }
+}
