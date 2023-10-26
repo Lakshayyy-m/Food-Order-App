@@ -14,7 +14,6 @@ function FoodItem(props) {
     };
     ctx.add(finalObject);
   };
-//!counter update ni ho raha on adding item, fix that!
   return (
     <div className={styles.main}>
       <div>

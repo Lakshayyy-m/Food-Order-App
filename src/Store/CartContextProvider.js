@@ -27,8 +27,30 @@ const CartContextProvider = (props) => {
     }
   };
 
+  const increment = (index) => {
+    foodList[index].quantity++;
+    setFoodList([...foodList]);
+  };
+
+  const decrement = (index) => {
+    if (foodList[index].quantity > 1) {
+      foodList[index].quantity--;
+      setFoodList([...foodList]);
+    } else {
+      foodList.splice(index, 1);
+      setFoodList([...foodList]);
+    }
+  };
+
   return (
-    <CartContext.Provider value={{ foodList: foodList, add: addItem }}>
+    <CartContext.Provider
+      value={{
+        foodList: foodList,
+        add: addItem,
+        increment: increment,
+        decrement: decrement,
+      }}
+    >
       {props.children}
     </CartContext.Provider>
   );
