@@ -27,7 +27,7 @@ function FoodItem(props) {
           <p>Quantity</p>
           <input type="number" defaultValue={0} min={0} ref={inputRef} />
         </div>
-        <button onClick={addItem}>+Add</button>
+        <button onClick={addItem}>+Addddd</button>
       </div>
     </div>
   );
