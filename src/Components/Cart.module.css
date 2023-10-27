@@ -72,3 +72,23 @@
   display: flex;
   justify-content: space-between;
 }
+
+.buttons{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.order{
+  
+  margin-block-start: 30px;
+  width: 30%;
+  height: 40px;
+  margin-inline: 10px;
+}
+
+.close{
+  margin-block-start: 30px;
+  width: 30%;
+  height: 40px;
+  margin-inline: 10px;
+}

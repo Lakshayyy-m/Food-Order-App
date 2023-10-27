@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import cartImg from "../Assets/cart.svg";
 import styles from "./CartButton.module.css";
 import { CartContext } from "../Store/CartContextProvider";
@@ -15,10 +15,22 @@ function CartButton() {
     }
   };
 
+  const cartCloser = () => {
+    console.log("19");
+    content = "";
+    setShowCart(false);
+  };
+
+  useEffect(() => {
+    if (ctx.foodList.length === 0) {
+      setShowCart(false);
+    }
+  }, [ctx.foodList.length]);
+
   if (showCart) {
     content = (
       <div className={styles.backdrop}>
-        <Cart />
+        <Cart close={cartCloser} />
       </div>
     );
   }

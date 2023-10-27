@@ -17,6 +17,10 @@ const Cart = (props) => {
     return (sum += currValue.price * currValue.quantity);
   }, 0);
 
+  const close = ()=> {
+    props.close();
+  }
+
   return (
     <div className={styles.cart}>
       <h1 className={styles.heading}>Your Cart</h1>
@@ -54,6 +58,10 @@ const Cart = (props) => {
       <div className={styles.total}>
         <h1>Total</h1>
         <h1>${cartTotal.toFixed(2)}</h1>
+      </div>
+      <div className={styles.buttons}>
+        <button className={styles.close} onClick={close}>Close</button>
+        <button className={styles.order}>Order</button>
       </div>
     </div>
   );
