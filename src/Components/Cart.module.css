@@ -92,3 +92,9 @@
   height: 40px;
   margin-inline: 10px;
 }
+
+@media (max-width: 610px){
+  .cart{
+    width: 90vw;
+  }
+}

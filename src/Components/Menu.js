@@ -29,7 +29,7 @@ function Menu() {
   return (
     <div className={styles.menuCard}>
       {itemList.map((curr) => {
-        return <FoodItem value={curr}  />;
+        return <FoodItem value={curr} key={Math.random()}  />;
       })}
     </div>
   );

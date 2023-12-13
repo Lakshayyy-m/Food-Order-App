@@ -22,8 +22,9 @@
   font-size: smaller;
 }
 
-@media (max-width: 580px) {
+@media (max-width: 610px) {
   .introduction {
     top: 121px;
+    width: 100vw;
   }
 }

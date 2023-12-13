@@ -17,16 +17,18 @@ const Cart = (props) => {
     return (sum += currValue.price * currValue.quantity);
   }, 0);
 
-  const close = ()=> {
-    props.close();
-  }
+  const close = (event) => {
+    console.log(event);
+
+    props.close(event);
+  };
 
   return (
     <div className={styles.cart}>
       <h1 className={styles.heading}>Your Cart</h1>
       {ctx.foodList.map((currValue, index) => {
         return (
-          <div className={styles.item}>
+          <div className={styles.item} key={Math.random()}>
             <div className={styles.left}>
               <h2 className={styles.name}>{currValue.name}</h2>
               <span className={styles.price}>
@@ -60,7 +62,16 @@ const Cart = (props) => {
         <h1>${cartTotal.toFixed(2)}</h1>
       </div>
       <div className={styles.buttons}>
-        <button className={styles.close} onClick={close}>Close</button>
+        <button
+          className={styles.close}
+          onClick={(event) => {
+            // console.log("yeh toh mast chalra hai");
+            event.stopPropagation();
+            return close(event);
+          }}
+        >
+          Close
+        </button>
         <button className={styles.order}>Order</button>
       </div>
     </div>

@@ -2,8 +2,8 @@
     display: flex;
     gap: 12px;
     background-color: rgb(5, 27, 82);
-    height: 3.4rem;
-    width: 15%;
+    height: 54px;
+    width: 223px;
     justify-content: center;
     align-items: center;
     border-radius: 1000px;
@@ -48,4 +48,24 @@
     align-items: center;
 }
 
+@media (max-width: 610px){
+    .mainButton{
+        display: flex;
+        /* flex-direction: column; */
+        width: 90px;
+        padding: 30px;
+    }
+
+    .cartImg{
+        padding: 0;
+    }
+
+    .counter{
+        background-color: transparent;
+        padding: 0;
+    }
+    .mainText{
+        display:none;
+    }
+}
 

@@ -9,16 +9,24 @@ function CartButton() {
   let content = "";
   const [showCart, setShowCart] = useState(false);
   const ctx = useContext(CartContext);
-  const cartShower = () => {
+
+  const cartShower = (event) => {
+    // console.log(showCart);
+    // console.log(event);
     if (ctx.foodList.length > 0) {
       setShowCart(true);
     }
   };
 
-  const cartCloser = () => {
-    console.log("19");
+  const cartCloser = (event) => {
+    // console.log(event);
+    // event.stopPropogation();
+    // event.nativeEvent.stopImmediatePropagation();
+
     content = "";
+    // console.log(showCart);
     setShowCart(false);
+    // console.log(showCart);
   };
 
   useEffect(() => {
