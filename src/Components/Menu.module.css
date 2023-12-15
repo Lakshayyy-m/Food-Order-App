@@ -8,6 +8,11 @@
     width: 65vw;
 }
 
+.tempText{
+    font-weight: 700;
+    text-align: center;
+}
+
 @media (max-width: 610px){
     .menuCard{
         width: 90vw;
