@@ -55,7 +55,7 @@ function Menu() {
     });
   }
 
-  //todo: Food list rendering
+  
   return <div className={styles.menuCard}>{content}</div>;
 }
 
